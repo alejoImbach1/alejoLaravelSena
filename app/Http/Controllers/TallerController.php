@@ -30,9 +30,9 @@ class TallerController extends Controller
         $divisores_number2 = $ob->obtenerDivisores($number2);
         $suma_divisores_number2 = $ob->sumar($divisores_number2);
         if($suma_divisores_number1 == $number2 && $suma_divisores_number2 == $number1){
-            $message = "SÍ son";
+            $message = "{$number1} y {$number2} SÍ son número amigos";
         }else{
-            $message = "NO son";
+            $message = "{$number1} y {$number2} NO son números amigos";
         }
         return $message;
     }
