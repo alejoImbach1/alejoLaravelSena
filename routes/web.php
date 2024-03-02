@@ -17,12 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/curso', function () {
+    return view('index');
+})->name('curso.index');
 
 Route::controller(TallerController::class)->group(function () {
-    Route::get('curso/tallerhttp','index')->name('curso.index');
+    Route::get('curso/tallerhttp','index')->name('curso.indexTallerHttp');
     Route::post('curso/tallerhttp/verificar-primo','verificarPrimo')->name('curso.verificarPrimo');
     Route::post('curso/tallerhttp/verificar-amigos','verificarAmigos')->name('curso.verificarAmigos');
     Route::post('curso/tallerhttp/calcular-promedio','calcularPromedio')->name('curso.calcularPromedio');

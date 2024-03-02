@@ -1,26 +1,21 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+@include('layouts.head', ['titulo' => 'tallerhttp'])
 
 <body>
+    @include('layouts.header', ['titulo' => 'Taller de Http'])
+
     @if (session('mensaje'))
-        <div class="alert alert-secondary fs-2 text-center" role="alert">
-            {{ session('mensaje')[0] }}
-        </div>
+        <script>
+            alert("<?php echo session('mensaje')[0]; ?>");
+        </script>
     @endif
+
     <div class="d-flex flex-column w-100 align-items-center pt-5">
-        <h1>Taller Http</h1>
         <div>
-            <span class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalPrimo">Primo</span>
-            <span class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalAmigos">Amigos</span>
-            <span class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalPromedio">Promedio</span>
+            <span class="btn btn-dark me-3" data-bs-toggle="modal" data-bs-target="#modalPrimo">Primo</span>
+            <span class="btn btn-dark me-3" data-bs-toggle="modal" data-bs-target="#modalAmigos">Amigos</span>
+            <span class="btn btn-dark me-3" data-bs-toggle="modal" data-bs-target="#modalPromedio">Promedio</span>
             <span class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalCuadratica">Cuadrática</span>
         </div>
     </div>
@@ -107,7 +102,8 @@
     </div>
 
     <!-- Modal cuadrática -->
-    <div class="modal fade" id="modalCuadratica" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalCuadratica" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog w-25">
             <div class="modal-content">
                 <div class="modal-header">
@@ -136,10 +132,8 @@
             </div>
         </div>
     </div>
+    @include('scriptbootstrap')
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>

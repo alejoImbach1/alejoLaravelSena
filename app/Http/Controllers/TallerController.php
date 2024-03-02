@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class TallerController extends Controller
 {
     public function index(){
-        return view('tallerhttp');
+        return view('assignments.tallerhttp');
     }
 
     public function verificarPrimo(Request $request)
