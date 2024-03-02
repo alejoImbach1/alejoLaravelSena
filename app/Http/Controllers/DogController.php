@@ -9,9 +9,10 @@ class DogController extends Controller
 {
     public function create(Request $request){
         $dog = new Dog();
-        $dog->nombre = $request->txtnombre;
-        $dog->raza = $request->txtraza;
-        $dog->peso = $request->txtpeso;
+        $dog->name = $request->name;
+        $dog->breed = $request->breed;
+        $dog->weight = $request->weight;
         $dog->save();
+        return back()->with('mensaje',["Se registró el perro"]);
     }
 }

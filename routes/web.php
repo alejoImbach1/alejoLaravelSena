@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ControllerTallerHttp;
 use App\Http\Controllers\DogController;
+use App\Http\Controllers\HouseController;
+use App\Http\Controllers\NumberController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TallerController;
 use Illuminate\Support\Facades\Route;
@@ -33,6 +35,10 @@ Route::get('/curso/producto', [ProductController::class,'productStore']);
 
 Route::get('/curso/registros', function () {
     return view('assignments.registros');
-});
+})->name('curso.indexRegistros');
 
-Route::post('/curso/registros/dog', [DogController::class,'create'])->name('curso.registrarDog');
+Route::post('/curso/registros/perro', [DogController::class,'create'])->name('curso.registrarPerro');
+
+Route::post('/curso/registros/casa', [HouseController::class,'create'])->name('curso.registrarCasa');
+
+Route::post('/curso/registros/numero', [NumberController::class,'create'])->name('curso.verificarPrimoYRegistrar');

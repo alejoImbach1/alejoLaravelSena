@@ -26,10 +26,7 @@ class TallerController extends Controller
                 $i = $i + 2;
             }
         }
-        // return "{$number} {$message}";
-        // return back()->with("mensaje",$message);
         return back()->with("mensaje", [$message]);
-        // return $message;
     }
 
     public function verificarAmigos(Request $request){

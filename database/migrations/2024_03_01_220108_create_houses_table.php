@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('houses', function (Blueprint $table) {
             $table->id();
+            $table->float('price',8,2);
+            $table->integer('area');
+            $table->smallInteger('stories');
+            $table->String('color');
             $table->timestamps();
         });
     }
