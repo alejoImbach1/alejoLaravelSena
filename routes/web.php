@@ -28,7 +28,7 @@ Route::controller(TallerController::class)->group(function () {
     Route::post('curso/tallerhttp/verificar-primo','verificarPrimo')->name('curso.verificarPrimo');
     Route::post('curso/tallerhttp/verificar-amigos','verificarAmigos')->name('curso.verificarAmigos');
     Route::post('curso/tallerhttp/calcular-promedio','calcularPromedio')->name('curso.calcularPromedio');
-    Route::post('curso/tallerhttp/calcular-cuadratica','calcularCuadratica')->name('curso.calcularCuadratica');
+    Route::post('curso/tallerhttp/calcular-cuadratica','cuadratica')->name('curso.calcularCuadratica');
 });
 
 Route::get('/curso/producto', [ProductController::class,'productStore']);
