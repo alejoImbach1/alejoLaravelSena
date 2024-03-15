@@ -1,11 +1,15 @@
 <?php
 
+use App\Http\Controllers\BarracksController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ControllerTallerHttp;
+use App\Http\Controllers\CorpController;
 use App\Http\Controllers\CuadraticaController;
 use App\Http\Controllers\DogController;
 use App\Http\Controllers\HouseController;
 use App\Http\Controllers\NumberController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SoldierController;
 use App\Http\Controllers\TallerController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +47,20 @@ Route::post('/curso/registros-casa', [HouseController::class,'create'])->name('c
 Route::post('/curso/registros-numero', [NumberController::class,'create'])->name('curso.verificarPrimoRegistrar');
 
 Route::post('/curso/registros-cuadratica', [CuadraticaController::class,'create'])->name('curso.registrarRaicesCuadratica');
+
+Route::get('/curso/primer-examen', function () {
+    return view('assignments.formularios')->with('extends','assignments.primerexamen');
+})->name('curso.indexPrimerExamen');
+
+Route::post('/curso/primer-examen-soldado', [SoldierController::class,'create'])->name('primerexamen.registrarSoldado');
+
+Route::post('/curso/primer-examen-cuartel', [BarracksController::class,'create'])->name('primerexamen.registrarCuartel');
+
+Route::post('/curso/primer-examen-cuerpo', [CorpController::class,'create'])->name('primerexamen.registrarCuerpo');
+
+Route::post('/curso/primer-examen-compañia', [CompanyController::class,'create'])->name('primerexamen.registrarCompañia');
+
+Route::post('/curso/primer-examen-servicio', [ServiceController::class,'create'])->name('primerexamen.registrarServicio');
+
+
+

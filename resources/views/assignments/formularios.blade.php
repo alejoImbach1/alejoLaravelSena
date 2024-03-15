@@ -99,3 +99,68 @@
     </div>
 @endsection
 
+@section('soldado')
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="nombre">Nombre</label>
+        <input type="text" name="nombre" min="0">
+    </div>
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" min="0">
+    </div>
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="grado">Grado</label>
+        <input type="text" min="1" max="99" name="grado">
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Registrar soldado</button>
+    </div>
+@endsection
+
+@section('cuartel')
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="nombre">Nombre</label>
+        <input type="text" name="nombre" min="0">
+    </div>
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="ubicacion">Ubicación</label>
+        <input type="text" name="ubicacion" min="0">
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Registrar cuartel</button>
+    </div>
+@endsection
+
+@section('cuerpo')
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="tipo">Tipo</label>
+        <input type="text" name="tipo" min="0">
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Registrar cuerpo</button>
+    </div>
+@endsection
+
+@section('compañia')
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="actividad">Actividad</label>
+        <input type="text" name="actividad" min="0">
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Registrar compañía</button>
+    </div>
+@endsection
+
+@section('servicio')
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="tipo">Tipo</label>
+        <input type="text" name="tipo" min="0">
+    </div>
+    <div class="d-flex flex-column w-100 mb-3">
+        <label class="fs-5 mb-1" for="actividad">Actividad</label>
+        <input type="text" name="actividad" min="0">
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Registrar servicio</button>
+    </div>
+@endsection
