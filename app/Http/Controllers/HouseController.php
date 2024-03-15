@@ -14,6 +14,6 @@ class HouseController extends Controller
         $casa->stories = $request->stories;
         $casa->color = $request->color;
         $casa->save();
-        return back()->with('mensaje',["Se registró la casa"]);
+        return back()->with('mensaje',"Se registró la casa");
     }
 }

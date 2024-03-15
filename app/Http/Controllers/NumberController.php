@@ -9,12 +9,12 @@ class NumberController extends Controller
 {
     public function create(Request $request){
         $modelNumber = new Number();
-        $number = $request->number;
+        $number = $request->numero;
         $modelNumber->number = $number;
         $calculador = new Calculator;
         $type = ($calculador->esPrimo($number)) ? "SÍ es primo":"NO es primo";
         $modelNumber->type = $type;
         $modelNumber->save();
-        return back()->with('mensaje',["{$number} {$type} y se registró"]);
+        return back()->with('mensaje',"{$number} {$type} y se registró");
     }
 }

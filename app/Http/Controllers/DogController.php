@@ -13,6 +13,6 @@ class DogController extends Controller
         $dog->breed = $request->breed;
         $dog->weight = $request->weight;
         $dog->save();
-        return back()->with('mensaje',["Se registró el perro"]);
+        return back()->with('mensaje',"Se registró el perro");
     }
 }
